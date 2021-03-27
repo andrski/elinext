@@ -1,0 +1,29 @@
+body {
+    color: #17202A;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 2.5rem;
+    padding: 0.9rem 0 0 2rem;
+    background-color: #717D7E;
+}
+
+.main-wrapper {
+    display: flex;
+    height: 82.8vh;
+
+    .nav-bar {
+        width: 10%;
+        border: 0.2rem solid #17202A;
+    }
+}
+
+.footer {
+    width: 100%;
+    padding: 0.9rem 0 0 2rem;
+    position: fixed;
+    bottom: 0;
+    height: 2.5rem;
+    background-color: #717D7E;
+}
