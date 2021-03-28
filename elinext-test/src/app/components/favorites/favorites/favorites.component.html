@@ -1,1 +1,19 @@
-<p>favorites works!</p>
+<div class="bookmarks-content">
+    <mat-grid-list cols="3" rowHeight="1:1.5">
+        <mat-grid-tile *ngFor="let image of bookmarks; let idx = index">
+        <mat-card class="example-card">
+            <img mat-card-image [src]="image.url" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+               {{image.title}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button (click)="removeBookmark(image)">
+                  remove bookmark!
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
