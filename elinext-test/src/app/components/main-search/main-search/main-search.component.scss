@@ -1,16 +1,20 @@
 .main-search-wrapper {
-    width: 100%;
-    margin: 2rem;
-    position: absolute;
-    top: 3rem;
-    left: 10%;
-
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  
     .input {
         width: 90%;
+        margin: 0 auto;
+        margin-top: 1rem;
     }
 
     .search-form-field {
-        width: 90%;
+        width: 100%;
 
         button {
             background: transparent;
@@ -18,24 +22,48 @@
         }
     }
 
-    .main-content {
-        width: 80%;
+    .pagination {
+        padding-right: 5%;
+        text-align: right;
+    }
 
-        img {
-            width: 90%;
-            height: 90%;
+    .main-content {
+        width: 100%;
+        flex: 1;
+        overflow: auto;
+
+        .mat-grid-list {
+            width: 100%;
+            margin-left: 5%;
+
+            .mat-card-content>:first-child {
+                height: 3rem;
+            }
+
+            .mat-grid-tile .mat-figure {
+                text-align: center;
+            }
+    
+            .mat-card-actions {
+                margin-right: 50%;
+            }
         }
 
-        .example-card {
-            max-width: 25rem;
-        }  
+        img {
+            width: 95%;
+            height: 95%;
+        } 
     }
 }
 
 .main-search-error {
+    text-align: center;
     width: 30%;
     position: fixed;
-    top: 5rem;
-    left: 30%;
-    color: red;
+    top: 9rem;
+    left: 45%;
+    line-height: 3rem;
+    font-size: 2.5rem;
+    color: #040404;
+    border: 0.2rem solid #B63407;
 }

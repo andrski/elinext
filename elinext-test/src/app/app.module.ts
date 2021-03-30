@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MatCardModule } from '@angular/material/card';
     MatGridListModule,
     HttpClientModule,
     MatCardModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

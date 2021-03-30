@@ -1,8 +1,16 @@
-<header class="header">image finder</header>
-<div class="main-wrapper">
-    <app-nav-bar class="nav-bar"></app-nav-bar>
-    <div class="content">
+<div class="main-wraper">
+    <header>
+        <p>image finder</p>
+    </header>
+    <main class="main-content">
+       <div class="nav-bar">
+        <app-nav-bar class="nav-bar"></app-nav-bar>
+       </div>
+       <div class="main-content-container">
         <router-outlet></router-outlet>
-    </div>
+       </div>
+    </main>
+    <footer>
+        <p>copyright</p> 
+    </footer>
 </div>
-<footer class="footer">copyright</footer>

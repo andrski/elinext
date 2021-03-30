@@ -13,16 +13,19 @@ import { isEqual } from 'lodash';
 export class MainSearchComponent implements OnInit {
   inputValue = '';
   images: any = [];
+  totalRecords = '';
+  page = 1;
   bookmarks: any = [];
   errorValue = false;
   debounceGet = new Subject<string>();
 
   constructor(private flickrService: FlickrService) {
     this.debounceGet.pipe(
-      debounceTime(2000),
+      debounceTime(700),
       // tslint:disable-next-line: deprecation
       distinctUntilChanged()).subscribe(() => {
         this.getImages();
+        this.search();
       });
   }
 
@@ -60,7 +63,7 @@ export class MainSearchComponent implements OnInit {
     if (this.inputValue.length > 0) {
       // tslint:disable-next-line: deprecation
       this.flickrService.searchKeywords(this.inputValue).subscribe((data) => {
-        this.images = data;
+        // this.images = data;
         console.log(this.images);
       });
     }
@@ -73,6 +76,7 @@ export class MainSearchComponent implements OnInit {
       // tslint:disable-next-line: deprecation
       this.flickrService.getImagesJsonPlaceHolder(value).subscribe((data) => {
         this.images = data;
+        this.totalRecords = data.length;
       });
     }
   }
